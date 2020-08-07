@@ -7,8 +7,10 @@ defmodule ElasticAccess.Application do
 
   def start(_type, _args) do
     children = [
+      ElasticAccess.hello(),
+      {Finch, name: "MyFinch"}
       # Starts a worker by calling: ElasticAccess.Worker.start_link(arg)
-      # {ElasticAccess.Worker, arg}
+      #ElasticAccess.hello()
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
