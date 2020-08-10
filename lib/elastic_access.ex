@@ -1,17 +1,7 @@
 defmodule ElasticAccess do
-  use Application
   @moduledoc """
   Documentation for `ElasticAccess`.
   """
-
-  def start(_type, _args) do
-    IO.puts "starting"
-    # some more stuff
-    #hello()
-  end
-
-
-
 
   @doc """
   Hello world.
@@ -22,8 +12,9 @@ defmodule ElasticAccess do
       :world
 
   """
-  def hello do
-    Finch.build(:get, "https://hex.pm") 
-    |> Finch.request("MyFinch")
+  def start do
+    Finch.build(:get, "http://localhost:9200/booklist/_search") 
+    |> Finch.request(:finch)
+    |> IO.inspect()
   end
 end
