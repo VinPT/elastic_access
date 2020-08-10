@@ -20,7 +20,8 @@ defmodule ElasticAccess do
 
   defp parse_body({:ok, data}) do
     %{body: body_data} = data
-    IO.inspect(body_data)
+    
+    Jason.decode!(body_data)
+    |>IO.inspect()
   end
-
 end
