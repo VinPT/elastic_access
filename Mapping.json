@@ -14,7 +14,7 @@
              "type": "text",
              "fields": {
                "autocomplete": {
-                 "type": "search_as_you_type",
+                 "type": "text",
                  "max_shingle_size": 3
                }
              }
@@ -63,7 +63,7 @@
          "similarity": "boolean",
          "fields": {
            "autocomplete": {
-             "type": "search_as_you_type",
+             "type": "text",
              "max_shingle_size": 3
            }
          }
@@ -72,7 +72,7 @@
          "type": "text",
          "fields": {
            "autocomplete": {
-             "type": "search_as_you_type",
+             "type": "text",
              "max_shingle_size": 3
            },
            "english": {
