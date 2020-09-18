@@ -1,6 +1,6 @@
 {
    "mappings": {
-     "dynamic": strict,
+     "dynamic": "strict",
      "properties": {
        "description": {
          "type": "text"
