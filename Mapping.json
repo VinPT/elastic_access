@@ -1,91 +1,89 @@
 {
-  "booksearch": {
-    "mappings": {
-      "dynamic": strict,
-      "properties": {
-        "description": {
-          "type": "text"
-        },
-        "author": {
-          "properties": {
-            "id": {
-              "type": "keyword"
-            },
-            "name": {
-              "type": "text",
-              "fields": {
-                "autocomplete": {
-                  "type": "search_as_you_type",
-                  "max_shingle_size": 3
-                }
-              }
-            }
-          }
-        },
-        "books": {
-          "properties": {
-            "author": {
-              "type": "text",
-              "fields": {
-                "keyword": {
-                  "type": "keyword",
-                  "ignore_above": 256
-                }
-              }
-            },
-            "authors": {
-              "type": "text"
-            },
-            "category": {
-              "type": "text"
-            },
-            "description": {
-              "type": "text"
-            },
-            "genre": {
-              "type": "text"
-            },
-            "subtitle": {
-              "type": "text"
-            },
-            "title": {
-              "type": "text"
-            },
-            "url": {
-              "type": "keyword"
-            }
-          }
-        },
-        "id": {
-          "type": "keyword"
-        },
-        "keyword": {
-          "type": "text",
-          "similarity": "boolean",
-          "fields": {
-            "autocomplete": {
-              "type": "search_as_you_type",
-              "max_shingle_size": 3
-            }
-          }
-        },
-        "title": {
-          "type": "text",
-          "fields": {
-            "autocomplete": {
-              "type": "search_as_you_type",
-              "max_shingle_size": 3
-            },
-            "english": {
-              "type": "text",
-              "analyzer": "english"
-            },
-            "raw": {
-              "type": "keyword"
-            }
-          }
-        }
-      }
-    }
-  }
+   "mappings": {
+     "dynamic": strict,
+     "properties": {
+       "description": {
+         "type": "text"
+       },
+       "author": {
+         "properties": {
+           "id": {
+             "type": "keyword"
+           },
+           "name": {
+             "type": "text",
+             "fields": {
+               "autocomplete": {
+                 "type": "search_as_you_type",
+                 "max_shingle_size": 3
+               }
+             }
+           }
+         }
+       },
+       "books": {
+         "properties": {
+           "author": {
+             "type": "text",
+             "fields": {
+               "keyword": {
+                 "type": "keyword",
+                 "ignore_above": 256
+               }
+             }
+           },
+           "authors": {
+             "type": "text"
+           },
+           "category": {
+             "type": "text"
+           },
+           "description": {
+             "type": "text"
+           },
+           "genre": {
+             "type": "text"
+           },
+           "subtitle": {
+             "type": "text"
+           },
+           "title": {
+             "type": "text"
+           },
+           "url": {
+             "type": "keyword"
+           }
+         }
+       },
+       "id": {
+         "type": "keyword"
+       },
+       "keyword": {
+         "type": "text",
+         "similarity": "boolean",
+         "fields": {
+           "autocomplete": {
+             "type": "search_as_you_type",
+             "max_shingle_size": 3
+           }
+         }
+       },
+       "title": {
+         "type": "text",
+         "fields": {
+           "autocomplete": {
+             "type": "search_as_you_type",
+             "max_shingle_size": 3
+           },
+           "english": {
+             "type": "text",
+             "analyzer": "english"
+           },
+           "raw": {
+             "type": "keyword"
+           }
+         }
+       }
+     }
+   }
 }
